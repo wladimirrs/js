@@ -51,31 +51,29 @@
                 <?php endif; ?>
             </div>
         </header>
+
+
+
+        <main class="main-content"> <!-- Wenn nicht eingeloggt, Login. Prüft, ob current_nav 1 oder 6 ist -->
+            <?php if(!isset($_SESSION["username"]) && in_array($current_nav, ["1", "6"])) {
+                require "views/login.view.php";
+            } ?>
+        </main>
+
+
+
+        <footer class="site-footer">
+            <p>&copy; <?=  date("Y"); ?></p>
+        </footer>
     </div>
 
 
-
-
-
-
-
-
     
+
+
+
+
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 </html>

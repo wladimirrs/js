@@ -46,8 +46,9 @@
         <header>
             <div class="header-user-info"> <!-- Wenn Nutzername gesetzt, hallo Nutzername und Logout-Link -->
                 <?php if(isset($_SESSION["username"])) : ?>
-                <span>Willkommen, <strong><?= htmlspecialchars($_SESSION["username"]) ?></strong>!</span>
-                <a href="index.php?nav=3" class="logout-link">Logout</a>
+                    <span>Willkommen, <strong><?= htmlspecialchars($_SESSION["username"]) ?></strong>!</span>
+                    <a href="index.php?nav=3" class="logout-link">Logout</a>
+                <?php endif; ?>
             </div>
         </header>
     </div>
